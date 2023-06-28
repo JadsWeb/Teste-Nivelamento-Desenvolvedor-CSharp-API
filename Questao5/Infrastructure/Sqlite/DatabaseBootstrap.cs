@@ -1,5 +1,7 @@
-﻿using Dapper;
+﻿using System.Data;
+using Dapper;
 using Microsoft.Data.Sqlite;
+using Questao5.Infrastructure.Database.CommandStore.Responses;
 
 namespace Questao5.Infrastructure.Sqlite
 {
@@ -50,6 +52,22 @@ namespace Questao5.Infrastructure.Sqlite
             connection.Execute("INSERT INTO contacorrente(idcontacorrente, numero, nome, ativo) VALUES('F475F943-7067-ED11-A06B-7E5DFA4A16C9', 741, 'Ameena Lynn', 0);");
             connection.Execute("INSERT INTO contacorrente(idcontacorrente, numero, nome, ativo) VALUES('BCDACA4A-7067-ED11-AF81-825DFA4A16C9', 852, 'Jarrad Mckee', 0);");
             connection.Execute("INSERT INTO contacorrente(idcontacorrente, numero, nome, ativo) VALUES('D2E02051-7067-ED11-94C0-835DFA4A16C9', 963, 'Elisha Simons', 0);");
+        }
+
+        public bool verificaConta(int idContaCorrente)
+        {
+            using var connection = new SqliteConnection(databaseConfig.Name);
+            connection.Execute("SELECT NUMERO FROM contacorrente WHERE NUMERO = " + idContaCorrente);
+            if (connection.State == ConnectionState.Open)
+            {
+                
+            }
+            return false;
+        }
+
+        public ResponseMovimento verificaSaldo(int idContaCorrente)
+        {
+            throw new NotImplementedException();
         }
     }
 }
