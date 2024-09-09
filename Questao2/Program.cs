@@ -3,7 +3,7 @@
     public static void Main()
     {
         string teamName = "Paris Saint-Germain";
-        int year = 2013;
+        int year = 2024;
         int totalGoals = getTotalScoredGoalsAsync(teamName, year);
 
         Console.WriteLine("Team "+ teamName +" scored "+ totalGoals.ToString() + " goals in "+ year);

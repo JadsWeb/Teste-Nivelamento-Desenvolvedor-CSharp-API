@@ -10,11 +10,11 @@ namespace Questao5.Infrastructure.Services
 {
     public class ContaCorrenteService : IContaCorrentService
     {
-        public readonly IContaCorrenteDatabase _contaCorrenteDatabase;
+        public readonly IContaCorrenteDatabase _contaCorrenteDataba;
         
         public ContaCorrenteService(IContaCorrenteDatabase contaCorrenteDb)
         {
-            _contaCorrenteDatabase = contaCorrenteDb;
+            _contaCorrenteDataba = contaCorrenteDb;
         }
 
         public ResponseMovimento consultaSaldo(int idConta)

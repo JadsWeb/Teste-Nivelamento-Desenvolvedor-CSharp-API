@@ -11,7 +11,7 @@ namespace Questao1 {
             int numero = int.Parse(Console.ReadLine());
             Console.Write("Entre o titular da conta: ");
             string titular = Console.ReadLine();
-            Console.Write("Haverá depósito inicial (s/n)? ");
+            Console.Write("Haverá inicial (s/n)? ");
             char resp = char.Parse(Console.ReadLine());
             if (resp == 's' || resp == 'S') {
                 Console.Write("Entre o valor de depósito inicial: ");
@@ -29,7 +29,7 @@ namespace Questao1 {
             Console.WriteLine("Saldo: " + String.Format( "{0:0,0.00}", conta.ValorConta));
 
             Console.WriteLine();
-            Console.Write("Entre um valor para depósito: ");
+            Console.Write("Entre um valor para depsito: ");
             double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             conta.Deposito(quantia);
             Console.WriteLine("Dados da conta atualizados:");

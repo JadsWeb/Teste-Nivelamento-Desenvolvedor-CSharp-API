@@ -15,7 +15,7 @@ namespace Questao1
         public string Nome { get; set; }
         public double ValorConta { get; set; }
 
-        public double TaxaSaque = 3.50;
+        public double TaxaSaque = 4;
 
         public void Deposito(double quantia)
         {
