@@ -39,18 +39,4 @@ public class service
             }
             return gols;
         }
-        public async Task<int> getScoredGoal(string team, int year)
-        {
-            var totalGols = 0;
-            var page = 0;
-            var dadosTime = new Application();
-            while(page == 0 || page < dadosTime.total_pages)
-            {
-                page++;
-                dadosTime = await getDados(team, year, page);
-                var total = getTotalGoals(team, dadosTime.data);
-                totalGols += total;
-            }
-            return totalGols;
-        }
 }
